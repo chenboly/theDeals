@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khmerdeals.controllers.StoreViewController">
+   <children>
+      <HBox prefHeight="720.0" prefWidth="1180.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="570.0" spacing="20.0">
+               <children>
+                  <JFXTextField fx:id="storeNameTextField" labelFloat="true" promptText="Store Name" />
+                  <JFXTextField fx:id="storeAddressTextField" labelFloat="true" prefHeight="27.0" prefWidth="329.0" promptText="Address" />
+                  <JFXTextField fx:id="storePhoneTextField" labelFloat="true" prefHeight="27.0" prefWidth="329.0" promptText="Phone" />
+                  <JFXTextField fx:id="storeWebsiteTextField" labelFloat="true" prefHeight="27.0" prefWidth="329.0" promptText="Website" />
+                  <HBox layoutX="10.0" layoutY="249.0" prefHeight="375.0" prefWidth="570.0" spacing="30.0">
+                     <children>
+                        <VBox prefHeight="300.0" prefWidth="400.0">
+                           <children>
+                              <JFXButton fx:id="uploadImageButton" onAction="#uploadImageButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Upload" textFill="WHITE" />
+                              <ImageView fx:id="storeImageView" fitHeight="279.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/image-not-available.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="200.0" layoutY="10.0" prefHeight="100.0" prefWidth="160.0" spacing="20.0">
+                           <children>
+                              <JFXButton fx:id="storeNewButton" onAction="#storeNewButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="New" textFill="WHITE" />
+                              <JFXButton fx:id="storeSaveButton" onAction="#storeSaveButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Save" textFill="WHITE" />
+                              <JFXButton fx:id="storeEditButton" onAction="#storeEditButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Edit" textFill="WHITE" />
+                              <JFXButton fx:id="storeDeleteButton" onAction="#storeDeleteButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Delete" textFill="WHITE" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="15.0" top="30.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox prefHeight="728.0" prefWidth="570.0">
+               <HBox.margin>
+                  <Insets left="15.0" />
+               </HBox.margin>
+               <children>
+                  <JFXTreeTableView fx:id="storeTableView" onMouseClicked="#getSelectedValueFromTableClicked" prefHeight="752.0" prefWidth="570.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTreeTableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

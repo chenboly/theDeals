@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="760.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khmerdeals.controllers.LoginAndRegisterViewController">
+   <children>
+      <JFXTabPane prefHeight="760.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Login">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="728.0" prefWidth="1000.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="Login">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <HBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0" spacing="30.0">
+                                       <children>
+                                          <JFXTextField fx:id="usernameLoginField" labelFloat="true" onAction="#loginButtonPressed" prefHeight="27.0" prefWidth="265.0" promptText="Username">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <JFXPasswordField fx:id="passwordLoginField" labelFloat="true" onAction="#loginButtonPressed" prefHeight="27.0" prefWidth="265.0" promptText="Password">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXPasswordField>
+                                          <Label fx:id="incorrectLoginLabel" text="Username or password incorrect" textFill="RED">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <JFXButton fx:id="loginButton" buttonType="RAISED" onAction="#loginButtonPressed" prefWidth="150.0" style="-fx-background-color: #4286f4;" text="Login" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="50.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Register">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="700.0" prefWidth="500.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" prefHeight="700.0" prefWidth="400.0" spacing="20.0">
+                                 <children>
+                                    <JFXTextField fx:id="registerFullnameTextField" labelFloat="true" prefHeight="29.0" prefWidth="371.0" promptText="Full Name">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="registerUsernameTextField" labelFloat="true" prefWidth="300.0" promptText="Username">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label fx:id="registerUsernameExistingLabel" text="Username already existed!" textFill="RED">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Label>
+                                    <JFXPasswordField fx:id="registerPasswordField" labelFloat="true" prefWidth="300.0" promptText="Password">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXPasswordField>
+                                    <JFXPasswordField fx:id="registerConfirmPasswordField" labelFloat="true" prefWidth="300.0" promptText="Confirm Password">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="-0.0" />
+                                       </VBox.margin>
+                                    </JFXPasswordField>
+                                    <Label fx:id="userRegisterConfirmPasswordNotMatchLabel" text="Confirm password not match!" textFill="RED" />
+                                    <JFXTextField fx:id="registerPhoneTextField" labelFloat="true" promptText="Phone">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <JFXTextField fx:id="registerEmailTextField" labelFloat="true" promptText="Email">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </JFXTextField>
+                                    <Label fx:id="registerEmailAddressExisted" text="Email address already existed!" textFill="RED" />
+                                    <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="15.0">
+                                       <children>
+                                          <JFXButton fx:id="registerUploadImageButton" buttonType="RAISED" onAction="#uploadImageButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Upload Image" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="-180.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                          <ImageView fx:id="registerImageViewField" fitHeight="220.0" fitWidth="358.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@images/image-not-available.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets top="-10.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <JFXButton fx:id="registerButton1" onAction="#registerButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Register" textFill="WHITE">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="10.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khmerdeals.controllers.UserManagementViewController">
+   <children>
+      <AnchorPane fx:id="userProfileAnchorPane" prefHeight="391.0" prefWidth="302.0" style="-fx-border-color: green; -fx-border-width: 1;" AnchorPane.leftAnchor="875.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox prefHeight="198.0" prefWidth="139.0" spacing="20.0">
+               <children>
+                  <Label text="Full Name:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="20.0" text="User Name:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="57.0" text="Phone:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="94.0" text="Email:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="131.0" text="Registered Date:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <VBox layoutX="129.0" prefHeight="198.0" prefWidth="171.0" spacing="20.0">
+               <children>
+                  <Label fx:id="fullnameProfileShowLabel" text="fullname" textFill="#4360b4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="usernameProfileShowLabel" layoutX="20.0" layoutY="20.0" text="username" textFill="#4360b4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="phoneProfileShowLabel" layoutX="20.0" layoutY="57.0" text="phone" textFill="#4360b4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="emailProfileShowLabel" layoutX="20.0" layoutY="94.0" text="email" textFill="#4360b4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="createdDateProfileShowLabel" layoutX="20.0" layoutY="131.0" text="created_date" textFill="#4360b4">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets left="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            <HBox alignment="CENTER" layoutY="204.0" prefHeight="198.0" prefWidth="300.0" AnchorPane.topAnchor="203.0">
+               <children>
+                  <ImageView fx:id="imageProfileDisplay" fitHeight="196.0" fitWidth="284.0" pickOnBounds="true" preserveRatio="true" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <VBox alignment="TOP_CENTER" layoutY="20.0" prefHeight="300.0" prefWidth="300.0" visible="false" AnchorPane.leftAnchor="875.0">
+         <children>
+            <JFXTextField fx:id="loginUsernameTextField" labelFloat="true" promptText="Username">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="loginPasswordField" labelFloat="true" promptText="Password">
+               <VBox.margin>
+                  <Insets top="40.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <Label fx:id="loginIncorrectUsernameOrPasswordLabel" text="Incorrect username or password!" textFill="RED">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+            </Label>
+            <JFXButton fx:id="loginButton" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Login" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutY="443.0" prefHeight="316.0" prefWidth="300.0" spacing="20.0" AnchorPane.leftAnchor="875.0" AnchorPane.topAnchor="415.0">
+         <padding>
+            <Insets top="20.0" />
+         </padding>
+         <children>
+            <JFXPasswordField fx:id="currentPasswordField" labelFloat="true" promptText="Current Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <Label fx:id="currentPasswordNotCorrectLabel" text="Current password not correct!" textFill="RED" />
+            <JFXPasswordField fx:id="newPasswordField" labelFloat="true" promptText="New Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <JFXPasswordField fx:id="newConfirmPasswordField" labelFloat="true" promptText="Confirm Password">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXPasswordField>
+            <Label fx:id="newConfirmPasswordNotMatchLabel" layoutX="67.0" layoutY="99.0" text="Confirm password not match!" textFill="RED" />
+            <JFXButton fx:id="changePasswordButton" onAction="#changePasswordButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Change" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </VBox>
+      <HBox fx:id="userRegisterHbox" prefHeight="352.0" prefWidth="870.0">
+         <children>
+            <VBox prefHeight="310.0" prefWidth="370.0" spacing="15.0">
+               <children>
+                  <JFXTextField fx:id="fullnameTextField" labelFloat="true" prefHeight="29.0" prefWidth="371.0" promptText="Full Name">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="usernameTextField" labelFloat="true" layoutX="15.0" layoutY="30.0" prefWidth="300.0" promptText="Username">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label fx:id="usernameExistingLabel" text="Username already existed!" textFill="RED">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Label>
+                  <JFXPasswordField fx:id="passwordField" labelFloat="true" prefWidth="300.0" promptText="Password">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXPasswordField>
+                  <JFXPasswordField fx:id="confirmPasswordField" labelFloat="true" layoutX="25.0" layoutY="150.0" prefWidth="300.0" promptText="Confirm Password">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXPasswordField>
+                  <Label fx:id="registerConfirmPasswordNotMatchLabel" layoutX="25.0" layoutY="118.0" text="Confirm password not match!" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></Label>
+                  <JFXTextField fx:id="phoneTextField" labelFloat="true" promptText="Phone">
+                     <VBox.margin>
+                        <Insets top="-10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="emailTextField" labelFloat="true" promptText="Email">
+                     <VBox.margin>
+                        <Insets top="-5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label fx:id="emailAddressExistedLabel" layoutX="25.0" layoutY="218.0" text="Email address already existed!" textFill="RED">
+                     <VBox.margin>
+                        <Insets top="-5.0" />
+                     </VBox.margin></Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets left="15.0" right="15.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="310.0" prefWidth="346.0">
+               <children>
+                  <JFXComboBox fx:id="userRoleComboBox" labelFloat="true" prefHeight="27.0" prefWidth="330.0" promptText="User Role">
+                     <VBox.margin>
+                        <Insets top="22.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXButton fx:id="uploadImageButton" buttonType="RAISED" onAction="#uploadImageButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Upload Image" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="-180.0" top="40.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <ImageView fx:id="imageViewField" fitHeight="238.0" fitWidth="332.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/image-not-available.png" />
+                     </image>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="310.0" prefWidth="152.0" spacing="25.0">
+               <children>
+                  <JFXButton fx:id="newButton" onAction="#newButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="New" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="saveButton" onAction="#saveButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Save" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="deleteButton" onAction="#deleteButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Delete" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox fx:id="userListHbox" alignment="TOP_CENTER" layoutX="12.0" layoutY="361.0" prefHeight="350.0" prefWidth="850.0" AnchorPane.topAnchor="360.0">
+         <children>
+            <VBox prefHeight="290.0" prefWidth="849.0">
+               <children>
+                  <TableView fx:id="userListTableView" onMouseClicked="#getUserIdOnTableViewClicked">
+                    <columns>
+                      <TableColumn fx:id="fullnameCol" prefWidth="197.69448709487915" text="Full Name" />
+                      <TableColumn fx:id="usernameCol" minWidth="0.0" prefWidth="215.3055419921875" text="Username" />
+                        <TableColumn fx:id="phoneCol" prefWidth="227.06918334960938" text="Phone" />
+                        <TableColumn fx:id="emailCol" prefWidth="230.47259521484375" text="Email" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

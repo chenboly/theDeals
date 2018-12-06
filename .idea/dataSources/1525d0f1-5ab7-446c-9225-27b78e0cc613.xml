@@ -1,0 +1,873 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="thedeals@localhost">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>10.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="abc">
+      <ObjectId>16796</ObjectId>
+      <Owner>db_user</Owner>
+    </database>
+    <database id="3" parent="1" name="dvdrental">
+      <ObjectId>16411</ObjectId>
+      <Owner>db_user</Owner>
+    </database>
+    <database id="4" parent="1" name="hotelManagementDB">
+      <ObjectId>16749</ObjectId>
+      <Owner>db_user</Owner>
+    </database>
+    <database id="5" parent="1" name="j2se_book_management_system">
+      <ObjectId>16805</ObjectId>
+      <Owner>db_user</Owner>
+    </database>
+    <database id="6" parent="1" name="khmersdeal">
+      <ObjectId>16410</ObjectId>
+      <Owner>khmersdeal</Owner>
+    </database>
+    <database id="7" parent="1" name="posdb">
+      <ObjectId>16767</ObjectId>
+      <Owner>db_user</Owner>
+    </database>
+    <database id="8" parent="1" name="postgres">
+      <ObjectId>13255</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>postgres</Owner>
+    </database>
+    <database id="9" parent="1" name="thedeals">
+      <ObjectId>16951</ObjectId>
+      <Owner>db_user</Owner>
+      <IntrospectionStateNumber>116</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="10" parent="1" name="db_user">
+      <ObjectId>16393</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="khmersdeal">
+      <ObjectId>16409</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="14" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="16" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="17" parent="1" name="postgres">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <schema id="18" parent="9" name="information_schema">
+      <ObjectId>12965</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="19" parent="9" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="20" parent="9" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="21" parent="9" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="22" parent="9" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+      <Owner>postgres</Owner>
+    </schema>
+    <schema id="23" parent="9" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>postgres</Owner>
+      <IntrospectionTimestamp>2018-11-04.11:37:59.918</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1940</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="24" parent="9" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="9" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="9" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="9" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="28" parent="9" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="29" parent="9" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="30" parent="23" name="d_product_images_id_seq">
+      <ObjectId>17410</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1610</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="23" name="d_posts_id_seq">
+      <ObjectId>17326</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1426</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="32" parent="23" name="d_products_id_seq">
+      <ObjectId>17311</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1425</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="33" parent="23" name="d_stores_id_seq">
+      <ObjectId>17293</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1424</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="23" name="d_user_and_role_id_seq">
+      <ObjectId>17388</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1437</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="35" parent="23" name="d_user_id_seq">
+      <ObjectId>17281</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1423</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="36" parent="23" name="d_user_role_id_seq">
+      <ObjectId>17362</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1432</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="37" parent="23" name="d_vote_id_seq">
+      <ObjectId>17342</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1427</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="38" parent="23" name="d_posts">
+      <ObjectId>17328</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1893</StateNumber>
+    </table>
+    <table id="39" parent="23" name="d_product_images">
+      <ObjectId>17412</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1610</StateNumber>
+    </table>
+    <table id="40" parent="23" name="d_products">
+      <ObjectId>17313</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1889</StateNumber>
+    </table>
+    <table id="41" parent="23" name="d_stores">
+      <ObjectId>17295</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1888</StateNumber>
+    </table>
+    <table id="42" parent="23" name="d_user">
+      <ObjectId>17283</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1887</StateNumber>
+    </table>
+    <table id="43" parent="23" name="d_user_and_role">
+      <ObjectId>17390</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1437</StateNumber>
+    </table>
+    <table id="44" parent="23" name="d_user_role">
+      <ObjectId>17364</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1437</StateNumber>
+    </table>
+    <table id="45" parent="23" name="d_vote">
+      <ObjectId>17344</ObjectId>
+      <Owner>db_user</Owner>
+      <StateNumber>1427</StateNumber>
+    </table>
+    <column id="46" parent="38" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1426</StateNumber>
+      <DefaultExpression>nextval(&apos;d_posts_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_posts_id_seq</SequenceName>
+    </column>
+    <column id="47" parent="38" name="description">
+      <Position>3</Position>
+      <DataType>text|0s</DataType>
+      <StateNumber>1426</StateNumber>
+      <TypeId>25</TypeId>
+    </column>
+    <column id="48" parent="38" name="price">
+      <Position>5</Position>
+      <DataType>real|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1426</StateNumber>
+      <TypeId>700</TypeId>
+    </column>
+    <column id="49" parent="38" name="promotion_code">
+      <Position>6</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>1426</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="38" name="number_of_positive_vote">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1426</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="51" parent="38" name="number_of_negative_vote">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1426</StateNumber>
+      <DefaultExpression>0</DefaultExpression>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="52" parent="38" name="max_vote">
+      <Position>9</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>1940</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="53" parent="38" name="status">
+      <Position>10</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1426</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="54" parent="38" name="start_date">
+      <Position>11</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>1929</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="55" parent="38" name="end_date">
+      <Position>12</Position>
+      <DataType>date|0s</DataType>
+      <StateNumber>1928</StateNumber>
+      <TypeId>1082</TypeId>
+    </column>
+    <column id="56" parent="38" name="user_id">
+      <Position>13</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1916</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="57" parent="38" name="store_id">
+      <Position>14</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1888</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="38" name="product_id">
+      <Position>15</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1889</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="59" parent="38" name="created_date">
+      <Position>16</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1893</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="60" parent="38" name="d_posts_pkey">
+      <ObjectId>17340</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="61" parent="38" name="d_posts_pkey">
+      <ObjectId>17341</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_posts_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="62" parent="38" name="d_posts_user_id_fkey">
+      <ObjectId>17425</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17283</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_user</RefTableName>
+      <RefKeyName>d_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="63" parent="38" name="d_posts_store_id_fkey">
+      <ObjectId>17430</ObjectId>
+      <ColNames>store_id</ColNames>
+      <RefTableId>17295</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_stores</RefTableName>
+      <RefKeyName>d_stores_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="64" parent="38" name="d_posts_product_id_fkey">
+      <ObjectId>17435</ObjectId>
+      <ColNames>product_id</ColNames>
+      <RefTableId>17313</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_products</RefTableName>
+      <RefKeyName>d_products_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <check id="65" parent="38" name="d_posts_price_check">
+      <ObjectId>17336</ObjectId>
+      <ColNames>price</ColNames>
+      <Predicate>price &gt;= (0)::double precision</Predicate>
+    </check>
+    <column id="66" parent="39" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1610</StateNumber>
+      <DefaultExpression>nextval(&apos;d_product_images_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_product_images_id_seq</SequenceName>
+    </column>
+    <column id="67" parent="39" name="product_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1610</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="68" parent="39" name="images_url">
+      <Position>3</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>1610</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="69" parent="39" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1610</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="70" parent="39" name="created_date">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1610</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="71" parent="39" name="d_product_images_pkey">
+      <ObjectId>17418</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="72" parent="39" name="d_product_images_pkey">
+      <ObjectId>17419</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_product_images_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="73" parent="39" name="d_product_images_product_id_fkey">
+      <ObjectId>17420</ObjectId>
+      <ColNames>product_id</ColNames>
+      <RefTableId>17313</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_products</RefTableName>
+      <RefKeyName>d_products_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="74" parent="40" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1425</StateNumber>
+      <DefaultExpression>nextval(&apos;d_products_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_products_id_seq</SequenceName>
+    </column>
+    <column id="75" parent="40" name="name">
+      <Position>2</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1425</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="76" parent="40" name="store_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1425</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="77" parent="40" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1425</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="78" parent="40" name="created_date">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1425</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="79" parent="40" name="d_products_pkey">
+      <ObjectId>17319</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="80" parent="40" name="d_products_pkey">
+      <ObjectId>17320</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_products_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="81" parent="40" name="d_products_store_id_fkey">
+      <ObjectId>17321</ObjectId>
+      <ColNames>store_id</ColNames>
+      <RefTableId>17295</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_stores</RefTableName>
+      <RefKeyName>d_stores_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="82" parent="41" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1424</StateNumber>
+      <DefaultExpression>nextval(&apos;d_stores_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_stores_id_seq</SequenceName>
+    </column>
+    <column id="83" parent="41" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1424</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="84" parent="41" name="name">
+      <Position>3</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1424</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="85" parent="41" name="address">
+      <Position>4</Position>
+      <DataType>varchar(250)|0s</DataType>
+      <StateNumber>1424</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="86" parent="41" name="phone">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1424</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="87" parent="41" name="image_url">
+      <Position>6</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>1424</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="88" parent="41" name="website">
+      <Position>7</Position>
+      <DataType>varchar(1000)|0s</DataType>
+      <StateNumber>1424</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="89" parent="41" name="status">
+      <Position>8</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1424</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="90" parent="41" name="created_date">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1424</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="91" parent="41" name="d_stores_pkey">
+      <ObjectId>17304</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="92" parent="41" name="d_stores_pkey">
+      <ObjectId>17305</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_stores_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="93" parent="41" name="d_stores_user_id_fkey">
+      <ObjectId>17306</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17283</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_user</RefTableName>
+      <RefKeyName>d_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="94" parent="42" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <DefaultExpression>nextval(&apos;d_user_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_user_id_seq</SequenceName>
+    </column>
+    <column id="95" parent="42" name="fullname">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="96" parent="42" name="username">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="97" parent="42" name="password">
+      <Position>4</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="98" parent="42" name="image_url">
+      <Position>5</Position>
+      <DataType>varchar(100)|0s</DataType>
+      <StateNumber>1423</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="99" parent="42" name="phone">
+      <Position>6</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="100" parent="42" name="email">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="101" parent="42" name="status">
+      <Position>8</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="102" parent="42" name="created_date">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1423</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="103" parent="42" name="d_user_pkey">
+      <ObjectId>17289</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="104" parent="42" name="d_user_username_key">
+      <ObjectId>17291</ObjectId>
+      <ColNames>username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="105" parent="42" name="d_user_email_uindex">
+      <ObjectId>17409</ObjectId>
+      <ColNames>email</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="106" parent="42" name="d_user_pkey">
+      <ObjectId>17290</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_user_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="107" parent="42" name="d_user_username_key">
+      <ObjectId>17292</ObjectId>
+      <ColNames>username</ColNames>
+      <UnderlyingIndexName>d_user_username_key</UnderlyingIndexName>
+    </key>
+    <column id="108" parent="43" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1437</StateNumber>
+      <DefaultExpression>nextval(&apos;d_user_and_role_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_user_and_role_id_seq</SequenceName>
+    </column>
+    <column id="109" parent="43" name="user_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1437</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="110" parent="43" name="role_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1437</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="111" parent="43" name="status">
+      <Position>4</Position>
+      <DataType>boolean|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1437</StateNumber>
+      <DefaultExpression>true</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <index id="112" parent="43" name="d_user_and_role_pkey">
+      <ObjectId>17395</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="113" parent="43" name="d_user_and_role_pkey">
+      <ObjectId>17396</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_user_and_role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="114" parent="43" name="d_user_and_role_user_id_fkey">
+      <ObjectId>17397</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17283</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_user</RefTableName>
+      <RefKeyName>d_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="115" parent="43" name="d_user_and_role_role_id_fkey">
+      <ObjectId>17402</ObjectId>
+      <ColNames>role_id</ColNames>
+      <RefTableId>17364</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_user_role</RefTableName>
+      <RefKeyName>d_user_role_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <column id="116" parent="44" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1432</StateNumber>
+      <DefaultExpression>nextval(&apos;d_user_role_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_user_role_id_seq</SequenceName>
+    </column>
+    <column id="117" parent="44" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1432</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="118" parent="44" name="d_user_role_pkey">
+      <ObjectId>17368</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="119" parent="44" name="d_user_role_pkey">
+      <ObjectId>17369</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_user_role_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="120" parent="45" name="id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1427</StateNumber>
+      <DefaultExpression>nextval(&apos;d_vote_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>23</TypeId>
+      <SequenceName>d_vote_id_seq</SequenceName>
+    </column>
+    <column id="121" parent="45" name="post_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1427</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="122" parent="45" name="user_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1427</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="123" parent="45" name="vote_type">
+      <Position>4</Position>
+      <DataType>char|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>1427</StateNumber>
+      <TypeId>1042</TypeId>
+    </column>
+    <column id="124" parent="45" name="created_date">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>1427</StateNumber>
+      <DefaultExpression>now()</DefaultExpression>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="125" parent="45" name="d_vote_pkey">
+      <ObjectId>17349</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="126" parent="45" name="d_vote_pkey">
+      <ObjectId>17350</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>d_vote_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="127" parent="45" name="d_vote_post_id_fkey">
+      <ObjectId>17351</ObjectId>
+      <ColNames>post_id</ColNames>
+      <RefTableId>17328</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_posts</RefTableName>
+      <RefKeyName>d_posts_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+    <foreign-key id="128" parent="45" name="d_vote_user_id_fkey">
+      <ObjectId>17356</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>17283</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>d_user</RefTableName>
+      <RefKeyName>d_user_pkey</RefKeyName>
+      <RefColNames>id</RefColNames>
+    </foreign-key>
+  </database-model>
+</dataSource>

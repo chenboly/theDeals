@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="loginForm" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khmerdeals.controllers.LoginAndRegisterViewController">
+   <children>
+      <Label layoutX="277.0" layoutY="39.0" text="Login">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="usernameLoginField" labelFloat="true" layoutX="168.0" layoutY="100.0" onAction="#loginButtonPressed" prefHeight="27.0" prefWidth="265.0" promptText="Username">
+         <font>
+            <Font size="15.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="passwordLoginField" layoutX="168.0" layoutY="165.0" onAction="#loginButtonPressed" prefHeight="27.0" prefWidth="265.0" promptText="Password">
+         <font>
+            <Font size="15.0" />
+         </font></JFXPasswordField>
+      <Label fx:id="incorrectLoginLabel" layoutX="192.0" layoutY="218.0" text="Username or password incorrect" textFill="RED">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="loginButton" buttonType="RAISED" layoutX="226.0" layoutY="266.0" onAction="#loginButtonPressed" prefWidth="150.0" style="-fx-background-color: #4286f4;" text="Login" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="registerButton" layoutX="166.0" layoutY="317.0" onAction="#registerButtonPressed" text="No Login account? Click here for register" textFill="#4286f4">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

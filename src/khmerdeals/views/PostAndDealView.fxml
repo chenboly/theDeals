@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1180.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="khmerdeals.controllers.PostAndDealViewController">
+   <children>
+      <HBox prefHeight="760.0" prefWidth="1130.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXTabPane prefHeight="760.0" prefWidth="1180.0">
+               <tabs>
+                  <Tab fx:id="newDealsTab" text="New Deals">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTreeTableView fx:id="newDealsTableView" prefHeight="725.0" prefWidth="1180.0" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="dealsExpiringSoon" text="Deals Expiring Soon">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <JFXTreeTableView fx:id="dealExpiringTable" prefHeight="725.0" prefWidth="1180.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="postDealsTab" text="Post a deals">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox prefHeight="728.0" prefWidth="1166.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <VBox alignment="TOP_CENTER" prefHeight="708.0" prefWidth="468.0" spacing="20.0">
+                                       <children>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                                             <children>
+                                                <JFXComboBox fx:id="storeComboBox" labelFloat="true" onAction="#storeComboBoxSelected" prefHeight="27.0" prefWidth="312.0" promptText="Select Store" />
+                                                <JFXComboBox fx:id="productComboBox" labelFloat="true" onAction="#productComboBoxSelected" prefHeight="27.0" prefWidth="258.0" promptText="Select Product" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="5.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <JFXTextArea fx:id="postDescriptionTextField" labelFloat="true" prefHeight="115.0" prefWidth="570.0" promptText="Short Description">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </JFXTextArea>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="80.0" prefWidth="570.0" spacing="70.0">
+                                             <children>
+                                                <JFXRadioButton fx:id="hasPromoRadioButton" onMouseClicked="#hasPromotionCodeClicked" text="Has a promotion code?">
+
+                                                </JFXRadioButton>
+                                                <JFXTextField fx:id="postPromoCodeTextField" focusColor="darkred" labelFloat="true" prefHeight="27.0" prefWidth="329.0" promptText="Promotion Code" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="-10.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="55.0" prefWidth="570.0" spacing="80.0">
+                                             <children>
+                                                <JFXTextField fx:id="postPriceTextField" labelFloat="true" prefHeight="27.0" prefWidth="220.0" promptText="Price" />
+                                                <JFXTextField fx:id="postMaxVoteTextField" labelFloat="true" prefHeight="27.0" prefWidth="266.0" promptText="Max Votes" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                             <padding>
+                                                <Insets top="10.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox prefHeight="73.0" prefWidth="570.0" spacing="30.0">
+                                             <children>
+                                                <VBox prefHeight="100.0" prefWidth="280.0">
+                                                   <children>
+                                                      <JFXDatePicker fx:id="startDatePicker" prefHeight="27.0" prefWidth="280.0" promptText="Start Date" showWeekNumbers="true" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="100.0" prefWidth="280.0">
+                                                   <children>
+                                                      <JFXDatePicker fx:id="endDatePicker" prefHeight="27.0" prefWidth="280.0" promptText="End Date" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="14.0" prefWidth="570.0">
+                                             <children>
+                                                <Label text="List of Product Photos" />
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="-15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                          <HBox prefHeight="214.0" prefWidth="570.0">
+                                             <VBox.margin>
+                                                <Insets bottom="-30.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <JFXTreeTableView fx:id="listProductImageTable" onMouseClicked="#showImageFromImageTableView" prefHeight="128.0" prefWidth="569.0" />
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="249.0" prefHeight="173.0" prefWidth="570.0" spacing="30.0">
+                                             <children>
+                                                <VBox prefHeight="240.0" prefWidth="354.0">
+                                                   <children>
+                                                      <ImageView fx:id="productPostedImageView" fitHeight="190.0" fitWidth="333.0" pickOnBounds="true" preserveRatio="true">
+                                                         <image>
+                                                            <Image url="@images/image-not-available.png" />
+                                                         </image>
+                                                      </ImageView>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="CENTER" layoutX="200.0" layoutY="10.0" prefHeight="100.0" prefWidth="160.0" spacing="20.0">
+                                                   <children>
+                                                      <JFXButton fx:id="postNewButton" onAction="#postNewButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="New" textFill="WHITE" />
+                                                      <JFXButton fx:id="postSaveButton" onAction="#postSaveButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Save" textFill="WHITE" />
+                                                      <JFXButton fx:id="postEditButton" onAction="#postEditButton" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Edit" textFill="WHITE" />
+                                                      <JFXButton fx:id="postDeleteButton" onAction="#postDeleteButtonPressed" prefWidth="150.0" style="-fx-background-color: #4360B4;" text="Delete" textFill="WHITE" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="15.0" top="10.0" />
+                                       </HBox.margin>
+                                    </VBox>
+                                    <VBox prefHeight="728.0" prefWidth="695.0">
+                                       <HBox.margin>
+                                          <Insets left="15.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <JFXTreeTableView fx:id="postTableView" prefHeight="720.0" prefWidth="570.0">
+                                             <VBox.margin>
+                                                <Insets bottom="5.0" top="5.0" />
+                                             </VBox.margin>
+                                          </JFXTreeTableView>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
